@@ -279,12 +279,11 @@
 </div>
 <div class="row">
 <div class="col-12">
-<input type="submit" value="Mesaj Gönder" class="btn btn-primary rounded-0 py-2 px-4">
+<input id="message_send" type="submit" value="Mesaj Gönder" class="btn btn-primary rounded-0 py-2 px-4">
 <span id="form-message"></span>
 </div>
 </div>
 </form>
-<div id="form-message"></div>
 </div>
 </div>
 </div>
@@ -373,6 +372,7 @@ Mikro ne anlama gelir?
 <script>
 var form1 = document.getElementById("form");
 var result1 = document.getElementById("form-message");
+var bttn1 = document.getElementById("message_send");
 form1.addEventListener("submit", function (e) {
 	e.preventDefault();
 	var formData = new FormData(form1);
@@ -384,6 +384,7 @@ form1.addEventListener("submit", function (e) {
 	var jsonForm = JSON.stringify(object);
 	result1.removeAttribute("style") 
 	result1.innerHTML = rsltMsg[2];
+	bttn1.setAttribute("disabled","disabled")
 /* 	$.post(
 		form1.getAttribute("action"),
 		jsonForm,
@@ -412,6 +413,7 @@ form1.addEventListener("submit", function (e) {
 		result1.innerHTML =  rsltMsg[0];
 	})
 	.then(function (response) {
+		bttn1.removeAttribute("disabled");
 		form1.reset();
 		setTimeout(() => {
 			result1.style.display = "none";
