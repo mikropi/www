@@ -10,6 +10,7 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//js.hcaptcha.com/1/api.js" async defer></script>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">
 	<style>
@@ -286,7 +287,15 @@
 </div>
 <div class="row">
 <div class="col-12">
-<input id="message_send" type="submit" value="Mesaj Gönder" class="btn btn-primary rounded-0 py-2 px-4">
+<div class="h-captcha" data-sitekey="71b6fa49-3947-4acf-9f33-abb86da3d55e"></div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<!-- <input id="message_send" type="submit" value="Mesaj Gönder" class="btn btn-primary rounded-0 py-2 px-4"> -->
+<button id="message_send" type="submit" class="btn btn-primary rounded-0 py-2 px-4">
+<span class="glyphicon glyphicon-send"></span> Mesaj Gönder
+</button>
 <span id="form-message"></span>
 </div>
 </div>
@@ -295,15 +304,6 @@
 </div>
 </div>
 </div>
-
-
-<div class="form-group required-field-block">       
-<div class="col-md-12 input-group">
-<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
-<textarea rows="3" size="30" value="" class="form-control" placeholder="Sporočilo"></textarea>  
-</div>
-</div>
-
 		<div class="col-xs-12">
 			<h2>Mikro özel yazılım çözümleri</h2>
 		</div>
