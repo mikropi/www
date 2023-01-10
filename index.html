@@ -287,7 +287,14 @@
 </div>
 <div class="row">
 <div class="col-12">
-<div class="h-captcha" data-sitekey="71b6fa49-3947-4acf-9f33-abb86da3d55e"></div>
+<!-- <div class="h-captcha" data-sitekey="71b6fa49-3947-4acf-9f33-abb86da3d55e"></div> -->
+      <div
+        id="hcaptcha"
+        class="h-captcha"
+        data-sitekey="71b6fa49-3947-4acf-9f33-abb86da3d55e"
+        data-callback="onCaptchaSubmit"
+        data-size="invisible"
+      ></div>
 </div>
 </div>
 <div class="row">
@@ -389,8 +396,56 @@ Mikro ne anlama gelir?
 var form1 = document.getElementById("form");
 var result1 = document.getElementById("form-message");
 var bttn1 = document.getElementById("message_send");
+/*
 form1.addEventListener("submit", function (e) {
 	e.preventDefault();
+	var formData = new FormData(form1);
+	var object = {};
+	var rsltMsg = ["❌ Birşeyler ters gitti! Tekrar deneyin. ⚠️","✅ E-posta gönderildi","⌛ Lütfen bekleyin..."];
+	formData.forEach((value, key) => {
+		object[key] = value;
+	});
+	var jsonForm = JSON.stringify(object);
+	result1.removeAttribute("style") 
+	result1.innerHTML = rsltMsg[2];
+	bttn1.setAttribute("disabled","disabled")
+// 	$.post(
+// 		form1.getAttribute("action"),
+// 		jsonForm,
+// 		null,
+// 		"json" // dataType must be set to json
+// 	)
+	fetch(form1.getAttribute("action"), {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json"
+		},
+		body: jsonForm
+	})
+	.then(async (response) => {
+		let json = await response.json();
+		if (response.status == 200) {
+			result1.innerHTML = rsltMsg[1];
+		} else {
+			console.log(response);
+			result1.innerHTML =  rsltMsg[0];
+		}
+	})
+	.catch(function (response) {
+		console.error(response);
+		result1.innerHTML =  rsltMsg[0];
+	})
+	.then(function (response) {
+		bttn1.removeAttribute("disabled");
+		form1.reset();
+		setTimeout(() => {
+			result1.style.display = "none";
+		}, 7000);
+	})
+});
+*/
+function onCaptchaSubmit(token) {
 	var formData = new FormData(form1);
 	var object = {};
 	var rsltMsg = ["❌ Birşeyler ters gitti! Tekrar deneyin. ⚠️","✅ E-posta gönderildi","⌛ Lütfen bekleyin..."];
@@ -435,6 +490,10 @@ form1.addEventListener("submit", function (e) {
 			result1.style.display = "none";
 		}, 7000);
 	})
+}
+form1.addEventListener("submit", function (e) {
+	e.preventDefault();
+	hcaptcha.execute();
 });
 </script>
 </body>
