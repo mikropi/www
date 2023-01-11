@@ -260,7 +260,7 @@
 
 </div>
 <div class="col-md-4">
-<form action="https://submit-form.com/6oOs4aif" method="POST" id="form" class="mb-5">
+<form action="#" data-form="https://submit-form.com/6oOs4aif" method="POST" id="form" class="mb-5">
 <div class="row">
 <div class="col-md-12 form-group">
 <div class="col-md-12 input-group">
@@ -300,7 +300,7 @@
 <div class="row">
 <div class="col-12">
 <!-- <input id="message_send" type="submit" value="Mesaj Gönder" class="btn btn-primary rounded-0 py-2 px-4"> -->
-<button id="message_send" type="submit" class="btn btn-primary rounded-0 py-2 px-4">
+<button id="message_send" type="button" class="btn btn-primary rounded-0 py-2 px-4">
 <span class="glyphicon glyphicon-send"></span> Mesaj Gönder
 </button>
 <span id="form-message"></span>
@@ -444,6 +444,10 @@ form1.addEventListener("submit", function (e) {
 		}, 7000);
 	})
 });
+form1.addEventListener("submit", function (e) {
+	e.preventDefault();
+	hcaptcha.execute();
+});
 */
 function onCaptchaSubmit(token) {
 	var formData = new FormData(form1);
@@ -456,13 +460,14 @@ function onCaptchaSubmit(token) {
 	result1.removeAttribute("style") 
 	result1.innerHTML = rsltMsg[2];
 	bttn1.setAttribute("disabled","disabled")
+	var form_url = form1.getAttribute("data-form")
 /* 	$.post(
 		form1.getAttribute("action"),
 		jsonForm,
 		null,
 		"json" // dataType must be set to json
 	) */
-	fetch(form1.getAttribute("action"), {
+	fetch(form_url, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -491,7 +496,7 @@ function onCaptchaSubmit(token) {
 		}, 7000);
 	})
 }
-form1.addEventListener("submit", function (e) {
+bttn1.addEventListener("click", function (e) {
 	e.preventDefault();
 	hcaptcha.execute();
 });
