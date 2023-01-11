@@ -552,7 +552,6 @@ bttn1.addEventListener("click", function (e) {
 	])
 	.onSuccess((ev) => {
 		console.log("onSuccess");
-		ev.preventDefault();
 		hcaptcha.execute();
 	})
 	.onFail((fields) => {
