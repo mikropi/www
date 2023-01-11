@@ -501,6 +501,10 @@ bttn1.addEventListener("click", function (e) {
 	e.preventDefault();
 
 	console.log("click");
+	validation
+	.refresh().revalidate().then(isValid => {})
+
+});
 	const validation = new JustValidate('#form', {
 		errorFieldCssClass: 'is-invalid',
 		errorLabelStyle: {
@@ -554,11 +558,8 @@ bttn1.addEventListener("click", function (e) {
 	.onFail((fields) => {
 		console.log("fields",fields);
 	})
-	.refresh().revalidate().then(isValid => {})
 	;
 
-
-});
 </script>
 </body>
 
