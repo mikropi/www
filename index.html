@@ -554,7 +554,7 @@ bttn1.addEventListener("click", function (e) {
 	.onFail((fields) => {
 		console.log("fields",fields);
 	})
-	.revalidate().then(isValid => {})
+	.refresh().revalidate().then(isValid => {})
 	;
 
 
