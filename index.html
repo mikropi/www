@@ -501,8 +501,8 @@ bttn1.addEventListener("click", function (e) {
 	e.preventDefault();
 
 	console.log("click");
-	validation
-	.refresh().revalidate().then(isValid => {})
+	validation.refresh();
+	validation.revalidate().then(isValid => {})
 
 });
 	const validation = new JustValidate('#form', {
