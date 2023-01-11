@@ -500,6 +500,7 @@ function onCaptchaSubmit(token) {
 bttn1.addEventListener("click", function (e) {
 	e.preventDefault();
 
+	console.log("click");
 	const validation = new JustValidate('#form', {
 		errorFieldCssClass: 'is-invalid',
 		errorLabelStyle: {
@@ -546,11 +547,12 @@ bttn1.addEventListener("click", function (e) {
 		},
 	])
 	.onSuccess((ev) => {
+		console.log("onSuccess");
 		ev.preventDefault();
 		hcaptcha.execute();
 	});
 	.onFail((fields) => {
-		console.log("fields");
+		console.log("fields",fields);
 	});
 
 
