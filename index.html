@@ -392,6 +392,7 @@ Mikro ne anlama gelir?
 		</div>
 	</div>
 </div>
+<script src="https://unpkg.com/just-validate@4.0.1/dist/just-validate.production.min.js"></script>
 <script>
 var form1 = document.getElementById("form");
 var result1 = document.getElementById("form-message");
@@ -498,7 +499,58 @@ function onCaptchaSubmit(token) {
 }
 bttn1.addEventListener("click", function (e) {
 	e.preventDefault();
-	hcaptcha.execute();
+
+	const validation = new JustValidate('#form', {
+		errorFieldCssClass: 'is-invalid',
+		errorLabelStyle: {
+			fontSize: '14px',
+			color: '#dc3545',
+		},
+		focusInvalidField: true,
+		lockForm: true,
+	});
+
+	validation
+	.addField('#name', [
+		{
+		rule: 'required',
+		},
+		{
+		rule: 'minLength',
+		value: 3,
+		},
+		{
+		rule: 'maxLength',
+		value: 25,
+		},
+	])
+	.addField('#email', [
+		{
+		rule: 'required',
+		},
+		{
+		rule: 'email',
+		},
+	])
+	.addField('#message', [
+		{
+		rule: 'required',
+		},
+		{
+		rule: 'minLength',
+		value: 10,
+		},
+		{
+		rule: 'maxLength',
+		value: 200,
+		},
+	])
+	.onSuccess((ev) => {
+		ev.preventDefault();
+		hcaptcha.execute();
+	});
+
+
 });
 </script>
 </body>
