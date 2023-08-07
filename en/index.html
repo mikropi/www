@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<title>Mikro Pi - Software Support Sales Reseller</title>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="description" content="Mikro Accounting Software, Dealer, Sales, Support, Price list, Help">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="alternate" href="https://mikropi.com/" hreflang="tr-TR" type="text/html"> 
+	<link rel="alternate" href="https://mikropi.com/de/" hreflang="de-DE" type="text/html"> 
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//js.hcaptcha.com/1/api.js" async defer></script>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Open Sans', 'Helvetica', sans-serif;
+			color: #000;
+			padding: 0;
+			margin: 0;
+			line-height: 1.428;
+		}
+		h1, h2, h3, h4, h5, h6, p {
+			padding: 0;
+			margin: 0;
+			color:#333333;
+		}
+		h1 {
+			font-size: 30px;
+			font-weight: 600!important;
+			color: #333;
+		}
+		h2 {
+			font-size: 24px;
+			font-weight: 600;
+		}
+		h3 {
+			font-size: 22px;
+			font-weight: 600;
+			line-height: 28px;
+		}
+		hr {
+			margin-top: 35px;
+			margin-bottom: 35px;
+			border: 0;
+			border-top: 1px solid #bfbebe;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+			margin-left: 20px;
+			line-height: 35px;
+			font-weight: 100;
+		}
+		a {
+			text-decoration: none;
+			cursor: pointer;
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			-ms-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+		}
+		li a {
+			color: white;
+			margin-left: 3px;
+		}
+		li > i {
+			color: white;
+		}
+		.column-wrap a {
+			color: #5c34c2;
+			font-weight: 600;
+			font-size:16px;
+			line-height:24px;
+		}
+		.column-wrap p {
+			color: #717171;
+			font-size:16px;
+			line-height:24px;
+			font-weight:300;
+		}
+		.container {
+			margin-top: 100px;
+		}
+		.navbar {
+			position: relative;
+			min-height: 45px;
+			margin-bottom: 20px;
+			border: 1px solid transparent;
+		}
+		.navbar-brand {
+			float: left;
+			height: auto;
+			padding: 10px 10px;
+			font-size: 18px;
+			line-height: 20px;
+		}
+		.navbar-nav>li>a {
+			padding-top: 11px;
+			padding-bottom: 11px;
+			font-size: 13px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		.navbar-nav>li>a:hover {
+			text-decoration: none;
+			color: #cdc3ea!important;
+		}
+		.navbar-nav>li>a i {
+			margin-right: 5px;
+		}
+		.nav-bar img {
+			position: relative;
+			top: 3px;
+		}
+		.congratz {
+			margin: 0 auto;
+			text-align: center;
+		}
+		.message::before {
+			content: " ";
+			background: url(//i.ibb.co/3MgFj0f/nice-handmade-brush-with-colors-rainbow.jpg);
+			width: 141px;
+			height: 175px;
+			position: absolute;
+			left: -150px;
+			top: 0;
+		}
+		.message {
+			width: 50%;
+			margin: 0 auto;
+			height: auto;
+			padding: 40px;
+			background-color: #eeecf9;
+			margin-bottom: 100px;
+			border-radius: 5px;
+			position:relative;
+		}
+		.message p {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		#pathName {
+			margin: 20px 10px;
+			color: grey;
+			font-weight: 300;
+			font-size:18px;
+			font-style: italic;
+		}
+		.column-custom {
+			border-radius: 5px;
+			background-color: #eeecf9;
+			padding: 35px;
+			margin-bottom: 20px;
+		}
+		.footer {
+			font-size: 13px;
+			color: gray !important;
+			margin-top: 25px;
+			line-height: 1.4;
+			margin-bottom: 45px;
+		}
+		.footer a {
+			cursor: pointer;
+			color: #646464 !important;
+			font-size: 12px;
+		}
+		.copyright {
+			color: #646464 !important;
+			font-size: 12px;
+		}
+		.navbar a {
+			color: white !important;
+		}
+		.navbar {
+			border-radius: 0px !important;
+		}
+		.navbar-inverse {
+			background-color: #434343;
+			border: none;
+		}
+		.column-custom-wrap{
+			padding-top: 10px 20px;
+		}
+		@media screen and (max-width: 768px) {
+			.message {
+				width: 75%;
+				padding: 35px;
+			}
+			.container {
+				margin-top: 30px;
+			}
+		}
+	</style>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/mikropi/image/upload/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/mikropi/image/upload/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="https://res.cloudinary.com/mikropi/image/upload/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/mikropi/image/upload/favicon/favicon-16x16.png">
+	<link rel="manifest" href="https://res.cloudinary.com/mikropi/raw/upload/v1625753001/favicon/site.webmanifest">
+	<link rel="mask-icon" href="https://res.cloudinary.com/mikropi/image/upload/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="https://res.cloudinary.com/mikropi/image/upload/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="msapplication-config" content="https://res.cloudinary.com/mikropi/raw/upload/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button"><span class="icon-bar"> </span> <span class="icon-bar"> </span>
+ <span class="icon-bar"> </span></button><a class="navbar-brand" href="//mikropi.com#/" rel="nofollow"> <img src="//i.ibb.co/Gx97F3J/colorful-watercolor-brush-stroke-on-transparent-background.png" width="120" alt="MikroPi Muhasabe Yazılımı"> </a><ul class="nav navbar-nav navbar-right">
+				<li><a href="//mikropi.com/" rel="nofollow">Türkçe</a></li>
+				<li><a href="//mikropi.com/en/" rel="nofollow">English</a></li>
+				<li><a href="//mikropi.com/de/" rel="nofollow">Deutsch</a></li>
+			</ul>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="//mikropi.com#tutorials" rel="nofollow"> <i aria-hidden="true" class="fa fa-graduation-cap"> </i> Guidelines </a></li>
+				<li><a href="//mikropi.com#online" rel="nofollow"> <i aria-hidden="true" class="fa fa-trophy"> </i> Features </a></li>
+				<li><a href="//mikropi.com#affiliates" rel="nofollow"> <i aria-hidden="true" class="fa fa-user"> </i> Sign up </a></li>
+				<li><a href="//mikropi.com#login" rel="nofollow"> <i aria-hidden="true" class="fa fa-lock"> </i> Sign in </a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="empty-account-page">
+	<div class="container">
+
+
+		<div class="row congratz">
+			<h1>MikroPi</h1><em></em><h2 id="pathName"><em> Master of His Business </em></h2>
+		</div>
+		<div class="row message">
+			<p>Inventory Management, Product Management, Cost Management, Purchasing and Supplier Management, Sales and Customer Management, Finance Management, Budget Management, Service Management, Business Management, Expense and Monetary Movement Management, Purchasing Management, Supplier Management</p>
+		</div>
+<div class="row justify-content-center">
+<div class="col-md-12">
+<div class="row justify-content-center">
+<div class="col-md-6">
+<h3 class="heading mb-4">Get in touch!</h3>
+<p>Have a question? Contact us by filling out the contact form.</p>
+<p><img alt="Image" class="img-fluid img-responsive container-fluid" src="https://colorlib.com/etc/cf/ContactFrom_v12/images/img-01.png"></p>
+
+</div>
+<div class="col-md-4">
+<form action="#" data-form="https://submit-form.com/6oOs4aif" method="POST" id="form" class="mb-5">
+<div class="row">
+<div class="col-md-12 form-group">
+<div class="col-md-12 input-group"><span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
+ <input required="" type="text" class="form-control" name="name" id="name" placeholder="Your name"></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 form-group">
+<div class="col-md-12 input-group"><span class="input-group-addon"> <span class="glyphicon glyphicon-envelope"> </span> </span>
+ <input required="" type="text" class="form-control" name="email" id="email" placeholder="Your E-mail address"></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 form-group">
+<div class="col-md-12 input-group"><span class="input-group-addon"> <span class="glyphicon glyphicon-comment"> </span> </span><textarea required="" class="form-control" name="message" id="message" cols="30" rows="7" placeholder="Write message"></textarea>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<!-- <div class="h-captcha" data-sitekey="71b6fa49-3947-4acf-9f33-abb86da3d55e"></div> -->
+      <div id="hcaptcha" class="h-captcha" data-sitekey="71b6fa49-3947-4acf-9f33-abb86da3d55e" data-callback="onCaptchaSubmit" data-size="invisible"></div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<!-- <input id="message_send" type="submit" value="Mesaj G&ouml;nder" class="btn btn-primary rounded-0 py-2 px-4"> -->
+<button id="message_send" type="button" class="btn btn-primary rounded-0 py-2 px-4"><span class="glyphicon glyphicon-send"> </span> Send Message</button><span id="form-message"> </span></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+		<div class="col-xs-12">
+			<h2>Mikro custom software solutions</h2>
+		</div>
+		<div class="column-wrap clearfix"><b> Mikro custom software </b><div class="col-xs-12">
+				<hr>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>What is Mikro Software?</h3><br><p>Mikro Yazılım is one of the fastest growing companies in our country in the field of corporate commercial software since 1988, when it was established with domestic facilities in Turkey. Comprehensive and functional software developed by Mikro Yazılım, which is one of the software companies with the widest product range and customer portfolio in the field of corporate software, ensures the best management of company assets.</p><br>
+ <a href="//mikropi.com#quote" rel="nofollow"> Read more </a></div>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3 style="padding-bottom: 5px">Mikro Software Fly, Jump, Run, MikroX, Portal</h3><br><p>Editing Details
+ • The warning messages given when entering the customer information on the POS Sales screen when checking the tax identification number information have been corrected.
+ • The problem of displaying wrong warehouse names in Store-Market reports has been fixed.
+ • Adjustments were made in the quick sales promotion definition screen.</p><br>
+ <a href="//mikropi.com#support" rel="nofollow"> Read more </a></div>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>MikroPi Blog</h3><br><p>Who is Mikro Software? 
+
+ What is Mikro Software? 
+
+ How much is a micro accounting program? 
+
+ How is the micro? 
+
+ What does Mikro Software do? 
+
+ Where is micro used? 
+
+ What is a micro accounting program? 
+
+ What is micro accounting package program? 
+
+ How to do a micro version upgrade? 
+
+ What does micro and macro level mean? 
+
+ How to use micron? 
+
+ What does micro mean?</p><br>
+ <a href="//mikropi.com#blog" rel="nofollow"> Read more </a></div>
+			</div>
+			<div class="col-xs-12">Mikro Accounting Software is an accounting program developed by Mikro Yazılım. It allows businesses to see their financial status and cash flow at a glance. It helps businesses manage all their securities effectively. Mikro Yazılım develops software that will manage the business of companies from all sectors at the highest level and enable them to grow efficiently. Mikro Accounting Software simplifies pre-accounting and includes basic accounting operations such as stock card management. In addition, the trainings and support services offered by Mikro Yazılım enable users to use the software effectively. <br> <br>
+ Mikro Accounting Software packages offer different features and functions according to the needs of businesses. Depending on the size, field of activity and accounting needs of your business, you can determine which package of Mikro Accounting Software is right for you. <br> <br></div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>Mikro Software Run Package</h3><br><ul>
+						<li>It is a package that covers basic accounting operations.</li>
+						<li>It includes important accounting processes such as invoice transactions, current account tracking, stock management.</li>
+						<li>It allows users to track their daily transactions and easily manage financial data.</li>
+						<li>It is a suitable option especially for small and medium-sized businesses.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>Mikro Software Jump Package</h3><br><ul>
+						<li>It is a package designed to meet the accounting needs of mid-level businesses.</li>
+						<li>In addition to the core features in the Run Package, it offers features such as comprehensive stock management, production tracking and sales orders.</li>
+						<li>It provides businesses with more control and analytical reporting.</li>
+						<li>It offers advanced features for businesses to grow and manage their operations more efficiently.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>Mikro Software Fly Package</h3><br><ul>
+						<li>It is a comprehensive accounting package developed for large-scale businesses and corporate companies.</li>
+						<li>In addition to all the features in the Jump Package, it offers customizability and integration for key business processes.</li>
+						<li>It includes advanced features such as advanced financial reporting, cost accounting, multi-company management.</li>
+						<li>It enables businesses to access more in-depth information for big data analysis and strategic decisions.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12">Mikro Accounting Software prices
+ The product price list is subject to change continuously and may differ between dealers. Pricing often varies based on the client's needs, the size of the business, and other factors. <br> <br>
+ Prices for Mikro Accounting Software may vary depending on the features included in the package, the number of users and additional services. That's why it's important to get information from authorized dealers to determine the right pricing. But in general, Mikro Accounting Software's pricing is based on the following factors: <br> <br>
+ Package Options: Mikro Accounting Software can have various package options that offer different features and functions. Differences between packages can be determined by factors such as number of users, business size, scope of modules and other features. These different package options can be offered at different price ranges. <br> <br>
+ Number of Users: Pricing of Mikro Accounting Software is usually based on the number of users. Businesses that require more user licenses usually pay a higher price. <br> <br>
+ Additional Services and Support: Additional services and support offered when purchasing Mikro Accounting Software may also affect pricing. For example, additional services such as setup, training, data conversion, or technical support packages may be costs that add up to the price. <br></div>
+		</div>
+
+		<div class="footer">
+			<div class="row">
+				<div class="text-center" style="margin-bottom: 10px;"><a href="//mikropi.com" rel="nofollow"> MikroPi </a>
+ | <a href="https://twitter.com/mikropi1" rel="nofollow"> Twitter </a>
+ | <a href="https://www.facebook.com/mikropi1" rel="nofollow"> Facebook </a>
+ | <a href="https://www.instagram.com/mikropi1/" rel="nofollow"> Instagram </a></div>
+				<div class="copyright text-center">MikroPi © 2022. All rights reserved.</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://unpkg.com/just-validate@4.0.1/dist/just-validate.production.min.js"></script>
+<script>
+var form1 = document.getElementById("form");
+var result1 = document.getElementById("form-message");
+var bttn1 = document.getElementById("message_send");
+/*
+form1.addEventListener("submit", function (e) {
+	e.preventDefault();
+	var formData = new FormData(form1);
+	var object = {};
+	var rsltMsg = ["&#10060; Bir&#351;eyler ters gitti! Tekrar deneyin. &#9888;&#65039;","&#9989; E-posta g&ouml;nderildi","&#8987; L&uuml;tfen bekleyin..."];
+	formData.forEach((value, key) => {
+		object[key] = value;
+	});
+	var jsonForm = JSON.stringify(object);
+	result1.removeAttribute("style") 
+	result1.innerHTML = rsltMsg[2];
+	bttn1.setAttribute("disabled","disabled")
+// 	$.post(
+// 		form1.getAttribute("action"),
+// 		jsonForm,
+// 		null,
+// 		"json" // dataType must be set to json
+// 	)
+	fetch(form1.getAttribute("action"), {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json"
+		},
+		body: jsonForm
+	})
+	.then(async (response) => {
+		let json = await response.json();
+		if (response.status == 200) {
+			result1.innerHTML = rsltMsg[1];
+		} else {
+			console.log(response);
+			result1.innerHTML =  rsltMsg[0];
+		}
+	})
+	.catch(function (response) {
+		console.error(response);
+		result1.innerHTML =  rsltMsg[0];
+	})
+	.then(function (response) {
+		bttn1.removeAttribute("disabled");
+		form1.reset();
+		setTimeout(() => {
+			result1.style.display = "none";
+		}, 7000);
+	})
+});
+form1.addEventListener("submit", function (e) {
+	e.preventDefault();
+	hcaptcha.execute();
+});
+*/
+function onCaptchaSubmit(token) {
+	var formData = new FormData(form1);
+	var object = {};
+	var rsltMsg = ["&#10060; Bir&#351;eyler ters gitti! Tekrar deneyin. &#9888;&#65039;","&#9989; E-posta g&ouml;nderildi","&#8987; L&uuml;tfen bekleyin..."];
+	formData.forEach((value, key) => {
+		object[key] = value;
+	});
+	var jsonForm = JSON.stringify(object);
+	result1.removeAttribute("style") 
+	result1.innerHTML = rsltMsg[2];
+	bttn1.setAttribute("disabled","disabled")
+	var form_url = form1.getAttribute("data-form")
+/* 	$.post(
+		form1.getAttribute("action"),
+		jsonForm,
+		null,
+		"json" // dataType must be set to json
+	) */
+	fetch(form_url, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json"
+		},
+		body: jsonForm
+	})
+	.then(async (response) => {
+		let json = await response.json();
+		if (response.status == 200) {
+			result1.innerHTML = rsltMsg[1];
+		} else {
+			console.log(response);
+			result1.innerHTML =  rsltMsg[0];
+		}
+	})
+	.catch(function (response) {
+		console.error(response);
+		result1.innerHTML =  rsltMsg[0];
+	})
+	.then(function (response) {
+		bttn1.removeAttribute("disabled");
+		form1.reset();
+		setTimeout(() => {
+			result1.style.display = "none";
+		}, 7000);
+	})
+}
+bttn1.addEventListener("click", function (e) {
+	e.preventDefault();
+
+	console.log("click");
+	validation.refresh();
+	validation.revalidate().then(isValid => {})
+
+});
+	const validation = new JustValidate('#form', {
+		errorFieldCssClass: 'is-invalid',
+		errorLabelStyle: {
+			fontSize: '14px',
+			color: '#dc3545',
+		},
+		focusInvalidField: true,
+		lockForm: true,
+	});
+
+	validation
+	.addField('#name', [
+		{
+		rule: 'required',
+		},
+		{
+		rule: 'minLength',
+		value: 3,
+		},
+		{
+		rule: 'maxLength',
+		value: 25,
+		},
+	])
+	.addField('#email', [
+		{
+		rule: 'required',
+		},
+		{
+		rule: 'email',
+		},
+	])
+	.addField('#message', [
+		{
+		rule: 'required',
+		},
+		{
+		rule: 'minLength',
+		value: 10,
+		},
+		{
+		rule: 'maxLength',
+		value: 200,
+		},
+	])
+	.onSuccess((ev) => {
+		console.log("onSuccess");
+		hcaptcha.execute();
+	})
+	.onFail((fields) => {
+		console.log("fields",fields);
+	})
+	;
+
+</script>
+</body>
+
+</html>

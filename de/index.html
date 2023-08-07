@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<title>Mikro Pi - Software-Unterst&uuml;tzung Vertriebspartner</title>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="description" content="Mikro Buchhaltungssoftware, Wiederverkäufer, Vertrieb, Support, Preisliste, Hilfe">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="alternate" href="https://mikropi.com/" hreflang="tr-TR" type="text/html"> 
+	<link rel="alternate" href="https://mikropi.com/en/" hreflang="en-US" type="text/html"> 
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//js.hcaptcha.com/1/api.js" async defer></script>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Open Sans', 'Helvetica', sans-serif;
+			color: #000;
+			padding: 0;
+			margin: 0;
+			line-height: 1.428;
+		}
+		h1, h2, h3, h4, h5, h6, p {
+			padding: 0;
+			margin: 0;
+			color:#333333;
+		}
+		h1 {
+			font-size: 30px;
+			font-weight: 600!important;
+			color: #333;
+		}
+		h2 {
+			font-size: 24px;
+			font-weight: 600;
+		}
+		h3 {
+			font-size: 22px;
+			font-weight: 600;
+			line-height: 28px;
+		}
+		hr {
+			margin-top: 35px;
+			margin-bottom: 35px;
+			border: 0;
+			border-top: 1px solid #bfbebe;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+			margin-left: 20px;
+			line-height: 35px;
+			font-weight: 100;
+		}
+		a {
+			text-decoration: none;
+			cursor: pointer;
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			-ms-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+		}
+		li a {
+			color: white;
+			margin-left: 3px;
+		}
+		li > i {
+			color: white;
+		}
+		.column-wrap a {
+			color: #5c34c2;
+			font-weight: 600;
+			font-size:16px;
+			line-height:24px;
+		}
+		.column-wrap p {
+			color: #717171;
+			font-size:16px;
+			line-height:24px;
+			font-weight:300;
+		}
+		.container {
+			margin-top: 100px;
+		}
+		.navbar {
+			position: relative;
+			min-height: 45px;
+			margin-bottom: 20px;
+			border: 1px solid transparent;
+		}
+		.navbar-brand {
+			float: left;
+			height: auto;
+			padding: 10px 10px;
+			font-size: 18px;
+			line-height: 20px;
+		}
+		.navbar-nav>li>a {
+			padding-top: 11px;
+			padding-bottom: 11px;
+			font-size: 13px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		.navbar-nav>li>a:hover {
+			text-decoration: none;
+			color: #cdc3ea!important;
+		}
+		.navbar-nav>li>a i {
+			margin-right: 5px;
+		}
+		.nav-bar img {
+			position: relative;
+			top: 3px;
+		}
+		.congratz {
+			margin: 0 auto;
+			text-align: center;
+		}
+		.message::before {
+			content: " ";
+			background: url(//i.ibb.co/3MgFj0f/nice-handmade-brush-with-colors-rainbow.jpg);
+			width: 141px;
+			height: 175px;
+			position: absolute;
+			left: -150px;
+			top: 0;
+		}
+		.message {
+			width: 50%;
+			margin: 0 auto;
+			height: auto;
+			padding: 40px;
+			background-color: #eeecf9;
+			margin-bottom: 100px;
+			border-radius: 5px;
+			position:relative;
+		}
+		.message p {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		#pathName {
+			margin: 20px 10px;
+			color: grey;
+			font-weight: 300;
+			font-size:18px;
+			font-style: italic;
+		}
+		.column-custom {
+			border-radius: 5px;
+			background-color: #eeecf9;
+			padding: 35px;
+			margin-bottom: 20px;
+		}
+		.footer {
+			font-size: 13px;
+			color: gray !important;
+			margin-top: 25px;
+			line-height: 1.4;
+			margin-bottom: 45px;
+		}
+		.footer a {
+			cursor: pointer;
+			color: #646464 !important;
+			font-size: 12px;
+		}
+		.copyright {
+			color: #646464 !important;
+			font-size: 12px;
+		}
+		.navbar a {
+			color: white !important;
+		}
+		.navbar {
+			border-radius: 0px !important;
+		}
+		.navbar-inverse {
+			background-color: #434343;
+			border: none;
+		}
+		.column-custom-wrap{
+			padding-top: 10px 20px;
+		}
+		@media screen and (max-width: 768px) {
+			.message {
+				width: 75%;
+				padding: 35px;
+			}
+			.container {
+				margin-top: 30px;
+			}
+		}
+	</style>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/mikropi/image/upload/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/mikropi/image/upload/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="https://res.cloudinary.com/mikropi/image/upload/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/mikropi/image/upload/favicon/favicon-16x16.png">
+	<link rel="manifest" href="https://res.cloudinary.com/mikropi/raw/upload/v1625753001/favicon/site.webmanifest">
+	<link rel="mask-icon" href="https://res.cloudinary.com/mikropi/image/upload/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="https://res.cloudinary.com/mikropi/image/upload/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="msapplication-config" content="https://res.cloudinary.com/mikropi/raw/upload/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button">
+				<span class="icon-bar"></span> <span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="//mikropi.com#/" rel="nofollow"><img src="//i.ibb.co/Gx97F3J/colorful-watercolor-brush-stroke-on-transparent-background.png" width="120" alt="MikroPi Buchhaltungssoftware"></a>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="//mikropi.com/" rel="nofollow">Türkçe</a></li>
+				<li><a href="//mikropi.com/en/" rel="nofollow">English</a></li>
+				<li><a href="//mikropi.com/de/" rel="nofollow">Deutsch</a></li>
+			</ul>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="//mikropi.com#tutorials" rel="nofollow"> <i aria-hidden="true" class="fa fa-graduation-cap"> </i> Richtlinien </a></li>
+				<li><a href="//micropi.com#online" rel="nofollow"><i aria-hidden="true" class="FA FA-trophy"></i> Spezifikationen</a></li>
+				<li><a href="//mikropi.com#affiliates" rel="nofollow"> <i aria-hidden="true" class="fa fa-user"> </i> Registrieren </a></li>
+				<li><a href="//mikropi.com#login" rel="nofollow"> <i aria-hidden="true" class="fa fa-lock"> </i> Anmelden </a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="empty-account-page">
+	<div class="container">
+		<div class="alert alert-success alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			Dieser Domainname ist zum <strong>Kauf verfügbar</strong>. Sie können ein Preisangebot über das Kontaktformular machen.
+		</div>
+		<div class="row congratz">
+			<h1>MikroPi</h1><em></em>
+			<h2 id="pathName"><em>Der Patriarch seines Werkes</em></h2>
+		</div>
+		<div class="row message">
+			<p>
+				Bestandsmanagement, Produktmanagement, Spesenmanagement, Einkaufs- und Lieferantenmanagement, Vertriebs- und Kundenmanagement, Finanzmanagement, Budgetmanagement, Servicemanagement, Unternehmensführung, Spesen- und Geldverkehrsmanagement, Einkaufsmanagement, Lieferantenmanagement
+			</p>
+		</div>
+<div class="row justify-content-center">
+<div class="col-md-12">
+<div class="row justify-content-center">
+<div class="col-md-6">
+<h3 class="heading mb-4">Nehmen Sie Kontakt auf!</h3>
+<p>Haben Sie eine Frage? Kontaktieren Sie uns, indem Sie das Kontaktformular ausfüllen.</p>
+<p><img alt="Image" class="img-fluid img-responsive container-fluid" src="https://colorlib.com/etc/cf/ContactFrom_v12/images/img-01.png"></p>
+
+</div>
+<div class="col-md-4">
+<form action="#" data-form="https://submit-form.com/6oOs4aif" method="POST" id="form" class="mb-5">
+<div class="row">
+<div class="col-md-12 form-group">
+<div class="col-md-12 input-group">
+<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+<input required="" type="text" class="form-control" name="name" id="name" placeholder="Ihr Name">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 form-group">
+<div class="col-md-12 input-group">
+<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+<input required="" type="text" class="form-control" name="email" id="email" placeholder="Ihre E-Mail-Adresse">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 form-group">
+<div class="col-md-12 input-group">
+<span class="input-group-addon"><span class="glyphicon glyphicon-comment"></span></span>
+<textarea required="" class="form-control" name="message" id="message" cols="30" rows="7" placeholder="Schreiben Sie Ihre Nachricht"></textarea>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<!-- <div class="h-captcha" data-sitekey="71b6fa49-3947-4acf-9f33-abb86da3d55e"></div> -->
+      <div
+        id="hcaptcha"
+        class="h-captcha"
+        data-sitekey="71b6fa49-3947-4acf-9f33-abb86da3d55e"
+        data-callback="onCaptchaSubmit"
+        data-size="invisible"
+      ></div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<!-- <input id="message_send" type="submit" value="Nachricht senden" class="btn btn-primary rounded-0 py-2 px-4"> -->
+<button id="message_send" type="button" class="btn btn-primary rounded-0 py-2 px-4">
+<span class="glyphicon glyphicon-send"></span> Nachricht senden
+</button>
+<span id="form-message"></span>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+		<div class="col-xs-12">
+			<h2>Kundenspezifische Softwarelösungen von Mikro</h2>
+		</div>
+		<div class="column-wrap clearfix"><b>Mikro-kundenspezifische Software</b>
+			<div class="col-xs-12">
+				<hr>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>Was ist Mikro software?</h3><br><p>Mikro Software ist eines der am schnellsten wachsenden Unternehmen unseres Landes im Bereich der kaufmännischen Unternehmenssoftware seit 1988, als es mit inländischen Einrichtungen in der Türkei gegründet wurde. Die von Mikro Software, einem der Softwareunternehmen mit der breitesten Produktpalette und dem größten Kundenportfolio im Bereich der Unternehmenssoftware, entwickelte umfassende und funktionelle Software gewährleistet eine optimale Verwaltung des Unternehmensvermögens.</p><br>
+					<a href="//mikropi.com#quote" rel="nofollow">Mehr lesen</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+				<h3 style="padding-bottom: 5px">Mikro Software Fliegen, Springen, Laufen, MikroX, Gantry</h3><br><p>Bearbeiten von Details
+				• Die Warnmeldungen, die bei der Steuerung der Steueridentifikationsnummer bei der Eingabe der Kundeninformationen über den POS-Verkaufsbildschirm angezeigt werden, wurden korrigiert.
+				• Es wurde ein Problem behoben, bei dem die Lagernamen in Filialmarktberichten falsch angezeigt wurden.
+				• Es wurden Vorkehrungen für den Schnelldefinitionsbildschirm für die Verkaufsförderung getroffen.</p><br>
+					<a href="//mikropi.com#support" rel="nofollow">Mehr lesen</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>MikroPi Blog</h3><br><p>Wer ist Eigentümer von Mikro Software?
+
+						Was ist Mikro Software?
+						
+						Wie viel kostet das Mikro-Buchhaltungsprogramm?
+						
+						Wie sieht es mit Mikro aus?
+						
+						Was leistet die Mikro Software?
+						
+						Wo wird Mikro eingesetzt?
+						
+						Was ist ein Mikro-Buchhaltungsprogramm?
+						
+						Was ist ein Mikro-Buchhaltungspaket?
+						
+						Wie führt man ein Upgrade einer Mikroversion durch?
+						
+						Was bedeutet Mikro- und Makroebene?
+						
+						Wie wird das Mikron verwendet?
+						
+						Was bedeutet Mikro?</p><br>
+						<a href="//mikropi.com#blog" rel="nofollow">Mehr lesen</a>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				Mikro Accounting Software ist ein von Mikro Yazılım entwickeltes Buchhaltungsprogramm. Es ermöglicht Unternehmen, ihren Finanzstatus und Cashflow auf einen Blick zu sehen. Es hilft Unternehmen dabei, alle ihre Wertpapiere effektiv zu verwalten. Mikro Yazılım entwickelt Software, die das Geschäft von Unternehmen aller Branchen auf höchstem Niveau verwaltet und ihnen ein effizientes Wachstum ermöglicht. Mikro Accounting Software vereinfacht die Vorabbuchung und umfasst grundlegende Buchhaltungsvorgänge wie die Verwaltung von Aktienkarten. Darüber hinaus ermöglichen die von Mikro Yazılım angebotenen Schulungen und Supportleistungen den Anwendern einen effektiven Einsatz der Software. <br> <br>
+				Mikro Accounting-Softwarepakete bieten je nach den Anforderungen von Unternehmen unterschiedliche Features und Funktionen. Abhängig von der Größe, dem Tätigkeitsbereich und den Buchhaltungsanforderungen Ihres Unternehmens können Sie bestimmen, welches Paket der Mikro Accounting Software das richtige für Sie ist. <br> <br>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>Mikro Software Run Paket</h3>
+					<br>
+					<ul>
+						<li>Es handelt sich um ein Paket, das grundlegende Buchhaltungsvorgänge abdeckt.</li>
+						<li>Es umfasst wichtige Buchhaltungsvorgänge wie Rechnungstransaktionen, Kontokorrentverfolgung und Bestandsverwaltung.</li>
+						<li>Es ermöglicht Benutzern, den Überblick über ihre täglichen Abläufe zu behalten und Finanzdaten einfach zu verwalten.</li>
+						<li>Insbesondere für kleine und mittelständische Unternehmen ist es eine geeignete Option.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>Mikro Software Sprungpaket</h3>
+					<br>
+					<ul>
+						<li>Es handelt sich um ein Paket, das speziell auf die Buchhaltungsanforderungen mittelständischer Unternehmen zugeschnitten ist.</li>
+						<li>Zusätzlich zu den Grundfunktionen des Run Package bietet es Funktionen wie eine umfassende Bestandsverwaltung, Produktionsverfolgung und Kundenaufträge.</li>
+						<li>Es bietet Unternehmen mehr Kontrolle und analytische Berichterstattung.</li>
+						<li>Es bietet erweiterte Funktionen für das Unternehmenswachstum und eine effizientere Verwaltung ihrer Abläufe.</li>						
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 column-custom-wrap">
+				<div class="column-custom">
+					<h3>Mikro Software Fly Paket</h3>
+					<br>
+					<ul>
+						<li>Es handelt sich um ein umfassendes Buchhaltungspaket, das für Großunternehmen und Konzerngesellschaften entwickelt wurde.</li>
+						<li>Zusätzlich zu allen Funktionen des Jump Packs bietet es Anpassungsmöglichkeiten und Integration für wichtige Geschäftsprozesse.</li>
+						<li>Es enthält erweiterte Funktionen wie erweiterte Finanzberichterstattung, Kostenrechnung und unternehmensübergreifendes Management.</li>
+						<li>Es bietet Unternehmen Zugang zu tiefergehenden Informationen für Big-Data-Analysen und strategische Entscheidungen.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				Preise für Mikro Accounting Software 
+				Die Produktpreisliste kann sich laufend ändern und von Händler zu Händler unterschiedlich sein. Die Preise variieren in der Regel je nach den Bedürfnissen des Kunden, der Größe des Unternehmens und anderen Faktoren. <br><br>
+				Die Preise für Mikro Accounting Software können in der Regel je nach den im Paket enthaltenen Funktionen, der Anzahl der Benutzer und zusätzlichen Dienstleistungen variieren. Deshalb ist es wichtig, sich bei autorisierten Händlern zu informieren, um den richtigen Preis zu ermitteln. Im Allgemeinen basiert die Preisgestaltung von Mikro Accounting Software jedoch auf den folgenden Faktoren:<br><br>
+				Paketoptionen: Mikro Accounting Software kann eine Vielzahl von Paketoptionen haben, die unterschiedliche Merkmale und Funktionen bieten. Unterschiede zwischen Paketen können durch Faktoren wie die Anzahl der Benutzer, die Größe des Unternehmens, den Umfang der Module und andere Funktionen bestimmt werden. Diese verschiedenen Paketoptionen können in verschiedenen Preisklassen angeboten werden. <br><br>
+				Anzahl der Benutzer: Die Preise für Mikro Accounting Software basieren in der Regel auf der Anzahl der Benutzer. Unternehmen, die mehr Benutzerlizenzen benötigen, zahlen in der Regel einen höheren Preis. <br><br>
+				Zusätzliche Dienstleistungen und Support: Zusätzliche Dienstleistungen und Support, die beim Kauf von Mikro Accounting Software angeboten werden, können sich ebenfalls auf die Preisgestaltung auswirken. Beispielsweise können zusätzliche Dienstleistungen wie Installation, Schulung, Datentransformation oder technische Supportpakete Kosten sein, die zusätzlich zum Preis hinzukommen. <br>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="row">
+				<div class="text-center" style="margin-bottom: 10px;">
+					<a href="//mikropi.com" rel="nofollow">MikroPi</a>
+					 | <a href="https://twitter.com/mikropi1" rel="nofollow">Twitter</a>
+					 | <a href="https://www.facebook.com/mikropi1" rel="nofollow">Facebook</a>
+					 | <a href="https://www.instagram.com/mikropi1/" rel="nofollow">Instagram</a>
+				</div>
+				<div class="copyright text-center">
+					MikroPi © 2022, alle Rechte vorbehalten.
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://unpkg.com/just-validate@4.0.1/dist/just-validate.production.min.js"></script>
+<script>
+var form1 = document.getElementById("form");
+var result1 = document.getElementById("form-message");
+var bttn1 = document.getElementById("message_send");
+/*
+form1.addEventListener("submit", function (e) {
+	e.preventDefault();
+	var formData = new FormData(form1);
+	var object = {};
+	var rsltMsg = ["❌ Birşeyler ters gitti! Tekrar deneyin. ⚠️","✅ E-posta gönderildi","⌛ Lütfen bekleyin..."];
+	formData.forEach((value, key) => {
+		object[key] = value;
+	});
+	var jsonForm = JSON.stringify(object);
+	result1.removeAttribute("style") 
+	result1.innerHTML = rsltMsg[2];
+	bttn1.setAttribute("disabled","disabled")
+// 	$.post(
+// 		form1.getAttribute("action"),
+// 		jsonForm,
+// 		null,
+// 		"json" // dataType must be set to json
+// 	)
+	fetch(form1.getAttribute("action"), {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json"
+		},
+		body: jsonForm
+	})
+	.then(async (response) => {
+		let json = await response.json();
+		if (response.status == 200) {
+			result1.innerHTML = rsltMsg[1];
+		} else {
+			console.log(response);
+			result1.innerHTML =  rsltMsg[0];
+		}
+	})
+	.catch(function (response) {
+		console.error(response);
+		result1.innerHTML =  rsltMsg[0];
+	})
+	.then(function (response) {
+		bttn1.removeAttribute("disabled");
+		form1.reset();
+		setTimeout(() => {
+			result1.style.display = "none";
+		}, 7000);
+	})
+});
+form1.addEventListener("submit", function (e) {
+	e.preventDefault();
+	hcaptcha.execute();
+});
+*/
+function onCaptchaSubmit(token) {
+	var formData = new FormData(form1);
+	var object = {};
+	var rsltMsg = ["❌ Es ist ein Fehler aufgetreten! Versuchen Sie es erneut. ⚠️","✅ E-Mail gesendet","⌛ Bitte warten..."];
+	formData.forEach((value, key) => {
+		object[key] = value;
+	});
+	var jsonForm = JSON.stringify(object);
+	result1.removeAttribute("style") 
+	result1.innerHTML = rsltMsg[2];
+	bttn1.setAttribute("disabled","disabled")
+	var form_url = form1.getAttribute("data-form")
+/* 	$.post(
+		form1.getAttribute("action"),
+		jsonForm,
+		null,
+		"json" // dataType must be set to json
+	) */
+	fetch(form_url, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json"
+		},
+		body: jsonForm
+	})
+	.then(async (response) => {
+		let json = await response.json();
+		if (response.status == 200) {
+			result1.innerHTML = rsltMsg[1];
+		} else {
+			console.log(response);
+			result1.innerHTML =  rsltMsg[0];
+		}
+	})
+	.catch(function (response) {
+		console.error(response);
+		result1.innerHTML =  rsltMsg[0];
+	})
+	.then(function (response) {
+		bttn1.removeAttribute("disabled");
+		form1.reset();
+		setTimeout(() => {
+			result1.style.display = "none";
+		}, 7000);
+	})
+}
+bttn1.addEventListener("click", function (e) {
+	e.preventDefault();
+
+	console.log("click");
+	validation.refresh();
+	validation.revalidate().then(isValid => {})
+
+});
+	const validation = new JustValidate('#form', {
+		errorFieldCssClass: 'is-invalid',
+		errorLabelStyle: {
+			fontSize: '14px',
+			color: '#dc3545',
+		},
+		focusInvalidField: true,
+		lockForm: true,
+	});
+
+	validation
+	.addField('#name', [
+		{
+		rule: 'required',
+		},
+		{
+		rule: 'minLength',
+		value: 3,
+		},
+		{
+		rule: 'maxLength',
+		value: 25,
+		},
+	])
+	.addField('#email', [
+		{
+		rule: 'required',
+		},
+		{
+		rule: 'email',
+		},
+	])
+	.addField('#message', [
+		{
+		rule: 'required',
+		},
+		{
+		rule: 'minLength',
+		value: 10,
+		},
+		{
+		rule: 'maxLength',
+		value: 200,
+		},
+	])
+	.onSuccess((ev) => {
+		console.log("onSuccess");
+		hcaptcha.execute();
+	})
+	.onFail((fields) => {
+		console.log("fields",fields);
+	})
+	;
+
+</script>
+</body>
+
+</html>
